@@ -947,7 +947,7 @@ table.alt tfoot {
 #bg:after {
   transform: scale(1.125);
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out; /* replace _duration(article) */
-  background-image: url('../../static/images/bg.jpg');
+  background-image: url('/static/images/bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -960,7 +960,7 @@ table.alt tfoot {
 }
 
 .body.is-loading #bg:before {
-  background-color: rgba(255, 255, 255, 0.8); /* replace _palette(bg-alt) */
+  background-color: rgba(0, 0, 0, 0.8); /* replace _palette(bg-alt) */
 }
 
 
