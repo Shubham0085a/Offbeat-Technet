@@ -128,6 +128,16 @@ p {
   margin: 0 0 1.5rem 0;
 }
 
+.teamx {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+ .teamx p {
+  font-size: medium;
+  font-weight: 700;
+ }
+
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-weight: 700;
@@ -145,8 +155,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
   border-bottom: solid 2px #cccccc;
   width: max-content;
-  padding-bottom: 0.5rem;
-  margin: 0 0 1.5rem 0;
+  /* padding-bottom: 0.5rem; */
+  /* margin: 0 0 1.5rem 0; */
 }
 
 h1 {
@@ -1043,6 +1053,9 @@ table.alt tfoot {
   border: solid 1px #fff; /* Replace with appropriate border color */
   border-radius: 100%;
 }
+.logo svg {
+  filter: drop-shadow(10px 10px 8px black);
+}
 
 .logo .icon:before {
   font-size: 2rem;
@@ -1291,7 +1304,7 @@ nav.use-middle ul li.is-middle {
 /* Small Breakpoint */
 @media (max-width: 600px) { /* Adjust breakpoint as needed */
   #main article {
-      padding: 2rem 2rem 1.5rem 0;
+      padding: 2rem 2rem 1.5rem;
   }
 
   #main article .close:before {
@@ -1306,7 +1319,7 @@ nav.use-middle ul li.is-middle {
 /* Extra Small Breakpoint */
 @media (max-width: 400px) { /* Adjust breakpoint as needed */
   #main article {
-      padding: 2rem 1.5rem 1rem 0;
+      padding: 2rem 1.5rem 1rem;
   }
 }
 

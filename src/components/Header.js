@@ -6,8 +6,8 @@ const Header = (props) => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.0"
-        width={100}
-        height={100}
+        width={80}
+        height={80}
         viewBox="0 0 1292.000000 1165.000000"
         preserveAspectRatio="xMidYMid meet"
       >
@@ -62,10 +62,10 @@ const Header = (props) => (
           <a
             href="javascript:;"
             onClick={() => {
-              props.onOpenArticle("about");
+              props.onOpenArticle("team");
             }}
           >
-            About
+            Team
           </a>
         </li>
         <li>
