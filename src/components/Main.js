@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
-import pic01 from "@/app/images/pic01.jpg";
+import pic01 from "@/app/images/bg.jpg";
 import pic02 from "@/app/images/pic02.jpg";
 import logo from "@/app/images/OFFBEAT_LOGO-04.png";
 import kaamhailogo from "@/app/images/white-logo.png";
@@ -323,7 +323,7 @@ const Main = (props) => {
           <p>
             Offbeat Technet Private Limited
             <br />
-            WeWork Prestige, Atlanta, 1A Block,
+            WeWork Prestige, Atlanta, 1A Block
             <br /> Koramangala, Bangalore
             <br />
             <a href="mailto:connect@offbeatx.com">connect@offbeatx.com</a>
