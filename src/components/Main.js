@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import Image from "next/image";
 import pic01 from "@/app/images/pic01.jpg";
 import pic02 from "@/app/images/pic02.jpg";
-import pic03 from "@/app/images/pic03.jpg";
 import logo from "@/app/images/OFFBEAT_LOGO-04.png";
+import kaamhailogo from "@/app/images/white-logo.png";
+import Link from "next/link";
 
 const Main = (props) => {
   const { article, articleTimeout, onCloseArticle, timeout } = props;
@@ -55,7 +56,43 @@ const Main = (props) => {
         <span className="image main rounded-xl">
           <Image src={pic02} alt=""></Image>
         </span>
-        <h2>Kaamhai</h2>
+        <div className="flex sm:flex-row flex-col sm:justify-between pb-5 gap-3 sm:gap-0">
+          <div className="flex flex-row items-center gap-2">
+            <h2>Kaamhai</h2>
+            <Link
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="nofollow noopener"
+            >
+              <svg
+                width={35}
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    fill="#0A66C2"
+                    d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"
+                  ></path>
+                </g>
+              </svg>
+            </Link>
+          </div>
+          <div className="-ml-5">
+            <Link href="https://www.youtube.com/"
+              target="_blank"
+              rel="nofollow noopener">
+                <Image src={kaamhailogo} alt="" width={250}></Image>
+              </Link>
+          </div>
+        </div>
         <p>
           Kaamhai is an innovative online platform designed to bridge the gap
           between work partners and employers in the Micro/Small-Business
@@ -63,16 +100,6 @@ const Main = (props) => {
           mission to provide a simplified platform for managing the workforce of
           micro and small-scale business owners, fostering a transparent and
           efficient job market that upholds fair employment practices.
-        </p>
-        <h2>MeetX</h2>
-        <p>
-          A cutting-edge solution designed to streamline professional networking
-          and collaboration. Learn more at MeetX.
-        </p>
-        <h2>ParkTag</h2>
-        <p>
-          A revolutionary platform focused on optimizing parking solutions.
-          Discover more at ParkTag.
         </p>
         {close}
       </article>
@@ -492,79 +519,88 @@ const Main = (props) => {
             </li>
           </ul>
         </form>
-        <ul className="icons">
-          <li>
-            <a
-              href="https://www.linkedin.com/company/offbeattechnet/"
-              target="_blank"
-              rel="nofollow noopener ugc"
-              className="flex items-center justify-center"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                viewBox="0 0 448 512"
+        <div className="flex flex-col sm:flex-row justify-between">
+          <p>
+            Offbeat Technet Private Limited
+            <br />
+            WeWork Prestige, Atlanta, 1A Block,
+            <br /> Koramangala, Bangalore
+            <br />
+            <a href="mailto:connect@offbeatx.com">connect@offbeatx.com</a>
+          </p>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://www.linkedin.com/company/offbeattechnet/"
+                target="_blank"
+                rel="nofollow noopener"
+                className="flex items-center justify-center"
               >
-                <path
-                  fill="currentColor"
-                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex items-center justify-center">
-              <svg
-                aria-hidden="true"
-                className="h-4 w-4"
-                data-prefix="fab"
-                data-icon="facebook"
-                class="svg-inline--fa fa-facebook fa-w-14 "
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"
-                ></path>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="flex items-center justify-center">
-              <svg
-                aria-hidden="true"
-                className="h-4 w-4"
-                data-prefix="fab"
-                data-icon="instagram"
-                class="svg-inline--fa fa-instagram fa-w-14 "
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                ></path>
-              </svg>
-            </a>
-          </li>
-          {/* <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" className="flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" className="flex items-center justify-center">
+                <svg
+                  aria-hidden="true"
+                  className="h-4 w-4"
+                  data-prefix="fab"
+                  data-icon="facebook"
+                  class="svg-inline--fa fa-facebook fa-w-14 "
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" className="flex items-center justify-center">
+                <svg
+                  aria-hidden="true"
+                  className="h-4 w-4"
+                  data-prefix="fab"
+                  data-icon="instagram"
+                  class="svg-inline--fa fa-instagram fa-w-14 "
+                  role="img"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            {/* <li>
             <a href="#" className="flex items-center justify-center">
               <svg
                 aria-hidden="true"
@@ -583,14 +619,8 @@ const Main = (props) => {
               </svg>
             </a>
           </li> */}
-        </ul>
-        <p>
-          Offbeat Technet Private Limited
-          <br />
-          WeWork Prestige, Atlanta, 1A Block, Koramangala, Bangalore
-          <br />
-          <a href="mailto:connect@offbeatx.com">connect@offbeatx.com</a>
-        </p>
+          </ul>
+        </div>
         {close}
       </article>
     </div>

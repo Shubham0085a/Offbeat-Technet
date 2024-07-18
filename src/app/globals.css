@@ -111,6 +111,7 @@ a {
   color: inherit;
 }
 
+
 a:hover {
   border-bottom-color: transparent;
 }
@@ -142,7 +143,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-weight: 700;
   line-height: 1.5;
-  margin: 0 0 0.75rem 0;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -944,9 +944,9 @@ table.alt tfoot {
 }
 
 #bg:before {
-  transition: background-color 0.5s ease-in-out; /* replace _duration(bg) */
-  transition-delay: 0.5s; /* replace _duration(intro) */
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* replace _palette(bg-overlay) */
+  transition: background-color 1s ease-in-out; /* replace _duration(bg) */
+  transition-delay: 0.5s;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                     url('/static/images/overlay.png');
   background-size: auto, 256px 256px;
   background-position: center, center;
@@ -970,7 +970,7 @@ table.alt tfoot {
 }
 
 .body.is-loading #bg:before {
-  background-color: rgba(0, 0, 0, 0.8); /* replace _palette(bg-alt) */
+  background-color: rgba(0, 0, 0, 1);
 }
 
 
@@ -1012,14 +1012,14 @@ table.alt tfoot {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transition: transform 1.5s ease-in-out, filter 1.5s ease-in-out, opacity 1.5s ease-in-out;
   background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
   max-width: 100%;
   text-align: center;
 }
 
 #header > * {
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
   position: relative;
   margin-top: 3.5rem;
 }
@@ -1070,8 +1070,8 @@ table.alt tfoot {
 }
 
 .content .inner {
-  transition: max-height 0.25s ease, padding 0.25s ease, opacity 0.25s ease-in-out;
-  transition-delay: 0.25s;
+  transition: max-height 1.5s ease, padding 1.5s ease, opacity 1.5s ease-in-out;
+  transition-delay: 1.5s;
   padding: 3rem 2rem;
   max-height: 40rem;
   overflow: hidden;
@@ -1241,13 +1241,13 @@ nav.use-middle ul li.is-middle {
 
 #main article {
   transform: translateY(0.25rem);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Adjust duration as needed */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   padding: 4.5rem 2.5rem 1.5rem 2.5rem;
   position: relative;
   width: 40rem;
   max-width: 100%;
-  background-color: rgba(27, 31, 34, 0.85); /* Replace with your color */
-  border-radius: 4px; /* Replace with your border radius */
+  background-color: rgba(27, 31, 34, 0.85);
+  border-radius: 4px;
   opacity: 0;
 }
 

@@ -31,8 +31,8 @@ const Header = (props) => (
       <div className="inner">
         <h1>Offbeat Technet</h1>
         <p>
-        Striving to Set the Benchmark in the Unorganized Sector!<br/>
-        Integrating AI to startup projects, enhancing efficiency!
+        Striving to Set the Benchmark in the Unorganized Sector !<br/>
+Empowering Micro Entrepreneurs with AI-Driven Hiring and Workforce Solutions !
         </p>
       </div>
     </div>
