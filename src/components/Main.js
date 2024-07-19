@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from 'react';
 import PropTypes from "prop-types";
 import Image from "next/image";
 import pic01 from "@/app/images/bg.jpg";
@@ -13,6 +13,26 @@ import Link from "next/link";
 
 const Main = (props) => {
   const { article, articleTimeout, onCloseArticle, timeout } = props;
+  const cardRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (cardRef.current && !cardRef.current.contains(event.target)) {
+        onCloseArticle();
+      }
+    };
+
+    if (article) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [article, onCloseArticle]);
+
+  
 
   const close = <div className="close" onClick={onCloseArticle}></div>;
 
@@ -20,6 +40,7 @@ const Main = (props) => {
     <div id="main" style={timeout ? { display: "flex" } : { display: "none" }}>
       <article
         id="intro"
+        ref={cardRef}
         className={`${article === "intro" ? "active" : ""} ${
           articleTimeout ? "timeout" : ""
         }`}
