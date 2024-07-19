@@ -4,7 +4,7 @@ import Image from "next/image";
 import pic01 from "@/app/images/bg.jpg";
 import pic02 from "@/app/images/pic02.jpg";
 import logo from "@/app/images/OFFBEAT_LOGO-04.png";
-import kaamhailogo from "@/app/images/white-logo.png";
+import kaamhailogo from "@/app/images/black-logo.png";
 import AntonySebastian from "@/app/images/Antony Sebastian.jpeg";
 import BibinMoncy from "@/app/images/Bibin Moncy.jpeg";
 import DeepaMalpani from "@/app/images/Deepa Malpani.jpeg";
@@ -13,11 +13,15 @@ import Link from "next/link";
 
 const Main = (props) => {
   const { article, articleTimeout, onCloseArticle, timeout } = props;
-  const cardRef = useRef(null);
+  const cardRefs = useRef({});
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (cardRef.current && !cardRef.current.contains(event.target)) {
-        onCloseArticle();
+      for (const key in cardRefs.current) {
+        if (cardRefs.current[key] && !cardRefs.current[key].contains(event.target)) {
+          if (article === key) {
+            onCloseArticle();
+          }
+        }
       }
     };
 
@@ -40,7 +44,7 @@ const Main = (props) => {
     <div id="main" style={timeout ? { display: "flex" } : { display: "none" }}>
       <article
         id="intro"
-        ref={cardRef}
+        ref={(el) => (cardRefs.current["intro"] = el)}
         className={`${article === "intro" ? "active" : ""} ${
           articleTimeout ? "timeout" : ""
         }`}
@@ -67,6 +71,7 @@ const Main = (props) => {
 
       <article
         id="projects"
+        ref={(el) => (cardRefs.current["projects"] = el)}
         className={`${article === "projects" ? "active" : ""} ${
           articleTimeout ? "timeout" : ""
         }`}
@@ -110,8 +115,8 @@ const Main = (props) => {
               </svg>
             </Link>
           </div>
-          <div className="-ml-5">
-            <Link href="https://www.youtube.com/"
+          <div className="-ml-5 bg-white rounded">
+            <Link href="https://www.kaamhai.in/"
               target="_blank"
               rel="nofollow noopener">
                 <Image src={kaamhailogo} alt="" width={250}></Image>
@@ -131,6 +136,7 @@ const Main = (props) => {
 
       <article
         id="team"
+        ref={(el) => (cardRefs.current["team"] = el)}
         className={`${article === "team" ? "active" : ""} ${
           articleTimeout ? "timeout" : ""
         }`}
@@ -143,10 +149,10 @@ const Main = (props) => {
         {/* <span className="image main">
           <Image src={pic03} alt=""></Image>
         </span> */}
-        <div className="teamx flex flex-row flex-wrap lg:flex-nowrap gap-5">
+        <div className="teamx flex flex-row flex-wrap items-center justify-center lg:flex-nowrap gap-5">
           <div className="flex flex-col items-center justify-center space-y-3">
           <div className="flex flex-col items-center">
-            <div className="h-32 w-32 rounded-full overflow-hidden">
+            <div className="h-28 w-28 lg:h-32 lg:w-32 rounded-full overflow-hidden">
               <Image src={AntonySebastian} alt=""/>
             </div>
             <span className="text-black text-xs font-medium bg-white -mt-4 rounded-full px-3">Founder | CEO</span>
@@ -179,7 +185,7 @@ const Main = (props) => {
           </div>
           <div className="flex flex-col items-center justify-center space-y-3">
           <div className="flex flex-col items-center">
-            <div className="h-32 w-32 rounded-full overflow-hidden bg-white">
+            <div className="h-28 w-28 lg:h-32 lg:w-32 rounded-full overflow-hidden bg-white">
               <Image src={DeepaMalpani} alt=""/>
             </div>
             <span className="text-black text-xs font-medium bg-white -mt-4 rounded-full px-2">Co-Founder | COO</span>
@@ -212,7 +218,7 @@ const Main = (props) => {
           </div>
           <div className="flex flex-col items-center justify-center space-y-3">
           <div className="flex flex-col items-center">
-            <div className="h-32 w-32 rounded-full overflow-hidden bg-white">
+            <div className="h-28 w-28 lg:h-32 lg:w-32 rounded-full overflow-hidden bg-white">
               <Image src={BibinMoncy} alt="" />
             </div>
             <span className="text-black text-xs font-medium bg-white -mt-4 rounded-full px-2">Co-Founder | CPO</span>
@@ -245,7 +251,7 @@ const Main = (props) => {
           </div>
           <div className="flex flex-col items-center justify-center space-y-3">
           <div className="flex flex-col items-center">
-            <div className="h-32 w-32 rounded-full overflow-hidden bg-white">
+            <div className="h-28 w-28 lg:h-32 lg:w-32 rounded-full overflow-hidden bg-white">
             <Image src={NavneetKrishnan} alt="" />
             </div>
             <span className="text-black text-xs font-medium bg-white -mt-4 rounded-full px-3">CFO</span>
@@ -293,6 +299,7 @@ const Main = (props) => {
 
       <article
         id="contact"
+        ref={(el) => (cardRefs.current["contact"] = el)}
         className={`${article === "contact" ? "active" : ""} ${
           articleTimeout ? "timeout" : ""
         }`}
