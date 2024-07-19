@@ -139,6 +139,21 @@ p {
   font-weight: 700;
  }
 
+ .kaamhai h2 {
+  text-transform: none;
+  font-weight: 700;
+  font-size: 2.25rem;
+  letter-spacing: normal;
+ }
+
+ .kaamhai a {
+  border: none;
+ }
+
+ .kaamhailogo a{
+  border: none;
+ }
+
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-weight: 700;
