@@ -265,17 +265,7 @@ const Main = (props) => {
             </div>
           </div>
         </div>
-        <p>
-          Offbeat TechNet Pvt Ltd was founded with a clear vision of mitigating
-          the challenges faced by MSMEs and SMEs operating in the unorganized
-          sector.
-        </p>
-        <p>
-          Understanding the nuances of this segment, the company embarked on a
-          mission to empower businesses by providing a transformative platform
-          that facilitates efficient business operations and collaboration
-          between skilled workers and employers.
-        </p>
+        <p className=' text-center'>The team you see here is just the beginning;<br/> our true strength lies in every member&apos;s dedication to our vision.</p>
         {close}
       </article>
 
